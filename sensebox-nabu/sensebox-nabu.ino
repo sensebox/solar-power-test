@@ -273,6 +273,8 @@ void do_send(osjob_t* j) {
 }
 
 void update_display(osjob_t* t) {
+  temperature = hdc.readTemperature();
+  humidity = hdc.readHumidity();
   printOnDisplay("Temperatur", String(temperature), "C",
                  "rel. Luftfeuchtigkeit ", String(humidity), "%");
   display.display();
