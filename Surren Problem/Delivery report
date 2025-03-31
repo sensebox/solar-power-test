@@ -1,0 +1,11 @@
+Reporting-MTA: dns; mslow1.mail.gandi.net
+X-Postfix-Queue-ID: AADC8C0DA2
+X-Postfix-Sender: rfc822; b.luig@reedu.de
+Arrival-Date: Wed, 18 Sep 2024 09:57:37 +0000 (UTC)
+
+Final-Recipient: rfc822; support@watterot.de
+Original-Recipient: rfc822;support@watterot.de
+Action: failed
+Status: 4.4.1
+Diagnostic-Code: X-Postfix; connect to watterot.de[199.59.243.120]:25:
+    Connection timed out

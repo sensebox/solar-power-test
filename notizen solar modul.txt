@@ -1,0 +1,8 @@
+Notizen für Energiesparen:
+
+bodenfeuchte 1mA
+regen 2mA
+
+UART feinstaub regensensor problem
+ batterie in regensensor board, sonst komplett aus nicht möglich. 
+senseBox steuert Stromsparmodus softwareseitig wäre optimal

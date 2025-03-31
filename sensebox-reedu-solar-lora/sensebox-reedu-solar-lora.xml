@@ -1,0 +1,47 @@
+<xml xmlns="https://developers.google.com/blockly/xml" board="mini">
+  <block type="arduino_functions" id="QWW|$jB8+*EL;}|#uA" deletable="false" x="27" y="16">
+    <data>mini</data>
+    <statement name="SETUP_FUNC">
+      <block type="sensebox_lora_initialize_otaa" id="4#@Zn`Jx^j@?:+Jy0Bx@">
+        <field name="DEVICEID">0x68, 0xCC, 0x06, 0xD0, 0x7E, 0xD5, 0xB3, 0x70</field>
+        <field name="APPID">0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00</field>
+        <field name="APPKEY">BDC3962F4EC7E2D1EB31CB289B262686</field>
+        <field name="INTERVAL">5</field>
+      </block>
+    </statement>
+    <statement name="LOOP_FUNC">
+      <block type="sensebox_lora_cayenne_send" id="-w+qK*WF_G5iDu2~`O$8">
+        <statement name="DO">
+          <block type="sensebox_lora_cayenne_temperature" id="|iT{O2(GW$zR:1Y?B(]z">
+            <field name="CHANNEL">1</field>
+            <value name="Value">
+              <block type="sensebox_solar_charger_SB041" id="QCFlOHMo[KOf1Lj:Y/0H">
+                <field name="MEASUREMENT">getBatteryLevel</field>
+              </block>
+            </value>
+            <next>
+              <block type="sensebox_lora_cayenne_temperature" id="Qf#oVaCAy2z![Zq+?%U_">
+                <field name="CHANNEL">2</field>
+                <value name="Value">
+                  <block type="sensebox_solar_charger_SB041" id="W5_ds=(5mDZT=GH5!^}J">
+                    <field name="MEASUREMENT">getBatteryVoltage</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="sensebox_lora_cayenne_temperature" id="U;5}cm!_a-)!CH7=#]Z[">
+                    <field name="CHANNEL">3</field>
+                    <value name="Value">
+                      <block type="sensebox_solar_charger_SB041" id="*vlien26yS~/b-_}e)A_">
+                        <field name="MEASUREMENT">getSolarPanelVoltage</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
